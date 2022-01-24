@@ -22,8 +22,9 @@ fetch("https://api.spacexdata.com/v4/launches")
 */
 
 // index.js
-
+//use fetch to get resources, fetch returns a promise
 fetch("https://api.spacexdata.com/v4/launches")
+//promise can be fulfilled (.then() )
   .then((response) => response.json())
   .then((data) => {
 
@@ -35,5 +36,5 @@ fetch("https://api.spacexdata.com/v4/launches")
     imgElement.setAttribute("width", 200);
     document.body.appendChild(imgElement);
   });
-
+//or rejected
 }).catch((err) => console.log(err));
